@@ -16,6 +16,7 @@ class Test(TestCase):
     def test_multiply_by_two_str(self):
         assert multiply_by_two_str("0") == "0 x 2 equals to 0."
         assert multiply_by_two_str("200") == "200 x 2 equals to 400."
-        assert multiply_by_two_str("-1") == "Please enter a positive integer."
-        assert multiply_by_two_str("A") == "Please enter a positive integer."
-        assert multiply_by_two_str("") == "Please enter a positive integer."
+        assert multiply_by_two_str("-21") == "-21 x 2 equals to -42."
+        assert multiply_by_two_str("a") == "Please enter an integer."
+        assert multiply_by_two_str("-") == "Please enter an integer."
+        assert multiply_by_two_str("") == "Please enter an integer."

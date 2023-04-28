@@ -1,6 +1,6 @@
 """
 Super Simple HTTP Server in Python .. not for production just for learning and fun
-Author: Wolf Paulus (https://wolfpaulus.com)
+Author: Wolf Paulus (https://wolfpaulus.com), edited by Woramon P.
 """
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from time import asctime
@@ -19,6 +19,8 @@ class MyServer(BaseHTTPRequestHandler):
             status = 200
             number = self.path.split("=")[1] if self.path.startswith("/?number=") else ""
             result = multiply_by_two_str(number)
+
+            # make the service respond when JSON is requested
             # https://gist.github.com/zuize47/370f33c2966b763eb16477bdfd71896a
             if self.headers.get_content_type() == "application/json":
                 self.send_response(status)
