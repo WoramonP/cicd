@@ -1,21 +1,21 @@
 """
 Test the main module.
-Author: Wolf Paulus (wolf@paulus.com)
+Author: Woramon P.
 """
+
 from unittest import TestCase
-from main import is_odd, is_odd_str
+from main import multiply_by_two, multiply_by_two_str
 
 
 class Test(TestCase):
-    def test_is_odd(self):
-        assert not is_odd(0)
-        assert is_odd(1)
-        assert not is_odd(2)
+    def test_multiply_by_two(self):
+        assert multiply_by_two(5) == 10
+        assert multiply_by_two(0) == 0
+        assert multiply_by_two(-5) == -10
 
-    def test_is_odd_str(self):
-        assert is_odd_str("0") == "0 is even."
-        assert is_odd_str("1") == "1 is odd."
-        assert is_odd_str("2") == "2 is even."
-        assert is_odd_str("-1") == "Please enter a number."
-        assert is_odd_str("A") == "Please enter a number."
-        assert is_odd_str("") == "Please enter a number."
+    def test_multiply_by_two_str(self):
+        assert multiply_by_two_str("0") == "0 x 2 equals to 0."
+        assert multiply_by_two_str("200") == "200 x 2 equals to 400."
+        assert multiply_by_two_str("-1") == "Please enter a positive integer."
+        assert multiply_by_two_str("A") == "Please enter a positive integer."
+        assert multiply_by_two_str("") == "Please enter a positive integer."

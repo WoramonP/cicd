@@ -1,17 +1,17 @@
 """
-odd/even number checker
-Author: Wolf Paulus (https://wolfpaulus.com)
+Multiply-by-two calculator. Only works when the input is a positive integer.
+Author: Woramon P.
 """
 
 
-def is_odd(num: int) -> bool:
-    """Return True if num is odd, False otherwise."""
-    return num % 2 == 1
+def multiply_by_two(num: int) -> bool:
+    """Return the number multiplied by two."""
+    return num * 2
 
 
-def is_odd_str(num: str) -> str:
-    """Return a string indicating whether num is odd or even."""
+def multiply_by_two_str(num: str) -> str:
+    """Return a string indicating the result of the number multiplied by two."""
     if num.isnumeric():
-        return f"{num} is {'odd' if is_odd(int(num)) else 'even'}."
+        return f"{num} x 2 equals to {multiply_by_two(int(num))}."
     else:
-        return "Please enter a number."
+        return "Please enter a positive integer."
