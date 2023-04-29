@@ -34,5 +34,5 @@ def remote_json_check(number: int) -> str:
 
 if __name__ == "__main__":
     if get_health():
-        for i in range(7,10):
-            print(f"{i} is odd: {remote_json_check(i)}")
+        for i in range(-2, 3):
+            print(f"Checking {i}: {remote_json_check(i)}")

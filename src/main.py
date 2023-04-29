@@ -4,7 +4,7 @@ Author: Woramon P.
 """
 
 
-def multiply_by_two(num: int) -> bool:
+def multiply_by_two(num: int) -> int:
     """Return the number multiplied by two."""
     return num * 2
 
